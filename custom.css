@@ -1,0 +1,302 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll animation reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Mode Styles */
+body.split-dark {
+  background-color: #071022;
+  color: #e6eef8;
+}
+
+body.split-dark .navbar {
+  background-color: #071022;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.split-dark .navbar a {
+  color: #e6eef8 !important;
+}
+
+body.split-dark .navbar div {
+  color: #e6eef8;
+}
+
+/* Hero section dark mode */
+body.split-dark .hero {
+  background-color: #071022;
+}
+
+body.split-dark .hero-name {
+  color: #e6eef8 !important;
+}
+
+body.split-dark .greeting {
+  color: #94a3b8 !important;
+}
+
+body.split-dark .btn-primary {
+  background-color: #e6eef8;
+  color: #071022;
+}
+
+body.split-dark .btn-primary:hover {
+  background-color: #cbd5e1;
+}
+
+/* About section dark mode */
+body.split-dark .section#about {
+  background-color: #071022;
+}
+
+body.split-dark .main-role {
+  color: #e6eef8 !important;
+}
+
+body.split-dark .btn-outline-clear {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+body.split-dark .btn-outline-clear:hover {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+body.split-dark .profile-image-wrapper {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+body.split-dark .profile-pic {
+  border-color: #071022;
+}
+
+/* Contact section heading center alignment */
+#contact h2 {
+  text-align: center;
+}
+
+/* Contact section stays light in split-dark mode */
+body.split-dark #contact {
+  background-color: #f7f7f7;
+  color: #111;
+}
+
+body.split-dark #contact h2,
+body.split-dark #contact h3 {
+  color: #111;
+}
+
+body.split-dark #contact input,
+body.split-dark #contact textarea {
+  background-color: #ffffff;
+  color: #111;
+  border-color: #d1d5db;
+}
+
+body.split-dark #contact button {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+body.split-dark #contact button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Table dark mode adjustments for split-dark */
+body.split-dark #submissionsContainer table {
+  background-color: #ffffff;
+}
+
+body.split-dark #submissionsContainer thead {
+  background-color: #0f172a;
+}
+
+body.split-dark #submissionsContainer tbody {
+  color: #111;
+}
+
+/* Footer dark mode */
+body.split-dark .footer-dark {
+  background-color: #071022;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.split-dark .footer-dark hr {
+  border-color: #334155;
+}
+
+/* Prevent anchor jumping behind fixed navbar */
+#home,
+#about,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem !important;
+  }
+  
+  .last-name {
+    padding-left: 2rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-name {
+    font-size: 2.5rem !important;
+  }
+  
+  .last-name {
+    padding-left: 1rem !important;
+  }
+}
+
+/* Animation for button hover effects */
+.btn-primary,
+.btn-outline-clear,
+button[type="submit"],
+#clearAllBtn {
+  transition: all 0.3s ease;
+}
+
+/* Smooth transitions for theme toggle */
+body,
+.navbar,
+.hero,
+.section,
+.footer-dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Table responsive enhancements */
+@media (max-width: 640px) {
+  table {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Custom scrollbar (optional enhancement) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body.split-dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+body.split-dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+body.split-dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Ensure proper spacing and alignment */
+.section {
+  min-height: auto;
+}
+
+/* Add subtle shadow to cards and tables */
+#submissionsContainer table {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile view detail modal styling */
+.mobile-detail-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mobile-detail-content {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+}
+
+body.split-dark .mobile-detail-content {
+  background: #1e293b;
+  color: #e6eef8;
+}
+
+.mobile-detail-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+body.split-dark .mobile-detail-close {
+  color: #94a3b8;
+}
+
+.mobile-detail-field {
+  margin-bottom: 16px;
+}
+
+.mobile-detail-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+}
+
+body.split-dark .mobile-detail-label {
+  color: #94a3b8;
+}
+
+.mobile-detail-value {
+  color: #111;
+  word-wrap: break-word;
+}
+
+body.split-dark .mobile-detail-value {
+  color: #e6eef8;
+}
